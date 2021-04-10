@@ -2,7 +2,7 @@ $(document).ready(function(){
 	localStorage.setItem("level", 20);
 	generarAleatorio();
 	setToastrConfig();
-	LanguageControl('game');
+	LanguageControl('game', 'es');
 });
 
 $(document).on("click", "#btnTest", function(){
@@ -133,6 +133,14 @@ $(document).on("change", "#rangeLevel", function(){
 		$(this).val(50);
 	}
 });
+$(document).on("click", "#btnGameConfig", function () {
+	$("#configurationModalCenter").modal();
+});
+$(document).on("change", "#languageSelect", function () {
+	var valLang = $("#languageSelect> option:selected").val();
+	LanguageControl('game', valLang);
+});
+
 function generarAleatorio(){
 	var numRef = "";
 	var i = 0;

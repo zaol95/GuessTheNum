@@ -45,7 +45,7 @@ namespace GuessTheNum
             //Language Control
             bundles.Add(new ScriptBundle("~/bundles/LanguageControl").Include(
                       "~/Scripts/Lang/LanguageControl.js",
-                      "~/Scripts/Lang/Lang.es.js"));
+                      "~/Scripts/Lang/LangTokens.js"));
         }
     }
 }

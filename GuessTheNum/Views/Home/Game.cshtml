@@ -3,6 +3,9 @@
 }
 <div class="form-group" id="divForm">
     <div id="divLevelRange">
+        <button type="button" class="btn btn-secondary" id="btnGameConfig">
+            <span class="glyphicon glyphicon-cog"></span>
+        </button>
         <label for="rangeLevel" id="lblRangeLevel" class="text-success">Dificultad: Normal</label>
         <input type="range" class="slider" id="rangeLevel" name="rangeLevel"><br>
         <h4 id="headerAttempts">Intentos Max.: 20</h4>
@@ -26,5 +29,30 @@
             <h1 id="headerResult" hidden=""></h1>
         </div>
         <div class="col-sm" />
+    </div>
+</div>
+
+<!-- Modal Configuration -->
+<div class="modal fade" id="configurationModalCenter" tabindex="-1" role="dialog" aria-labelledby="configurationModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="configurationModalLongTitle">Configuración</h5>
+            </div>
+            <div class="modal-body">
+                <label for="languageSelect" id="lblLanguageSelect">Lenguaje</label>
+                <select name="languageSelect" id="languageSelect">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="btnCancelSettings" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="btnSaveSettings">Guardar Cambios</button>
+            </div>
+        </div>
     </div>
 </div>
