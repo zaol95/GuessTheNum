@@ -20,11 +20,32 @@ namespace GuessTheNum
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.bundle.js"
+                      ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            //Toastr
+            bundles.Add(new ScriptBundle("~/bundles/ToastrJS").Include(
+                      "~/Scripts/Toastr.js"));
+
+            bundles.Add(new StyleBundle("~/Content/ToastrCSS").Include(
+                      "~/Content/Toastr.css"));
+
+            //Main JS
+            bundles.Add(new ScriptBundle("~/bundles/GuessTheNum").Include(
+                      "~/Scripts/App/gessTheNum.js"));
+            
+            bundles.Add(new ScriptBundle("~/Content/GuessTheNum").Include(
+                      "~/Content/App/gessTheNum.css"));
+
+            //Language Control
+            bundles.Add(new ScriptBundle("~/bundles/LanguageControl").Include(
+                      "~/Scripts/Lang/LanguageControl.js",
+                      "~/Scripts/Lang/Lang.es.js"));
         }
     }
 }
